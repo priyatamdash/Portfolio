@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #3d5a80;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: #4b70a0;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: #1fd0d6;
+        }
+
+        main hr {
+            background-color: #9c97f1;
+            margin: 15px 20px;
+            height: 1.2px;
+            border: 0;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            margin: 75px 0;
+            padding: 0 20px;
+        }
+
+        .firstsection>div {
+            flex: 1;
+            min-width: 280px;
+            margin: 10px;
+        }
+
+        .leftsection {
+            font-size: 2.5rem;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #ff6b46;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #ff9175;
+            color: #ff6b46;
+            border: 2px solid black;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button a:hover {
+            color: #ff6b46;
+        }
+
+        .rightsection img {
+            width: 100%;
+        }
+
+        .purpple {
+            color: #ff6b46;
+        }
+
+        #element {
+            color: #ff6b46;
+        }
+
+        .secondsection {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .secondsection h1 {
+            font-size: 2rem;
+            color: #fdca3f;
+        }
+
+        div.box {
+            background-color: white;
+            height: 1px;
+            margin: 0 20px;
+        }
+
+        div.about-text {
+            font-size: 19px;
+            margin: 0 20px;
+        }
+
+        div.workdiv {
+            display: block;
+        }
+
+        h1.mywork {
+            font-size: 2rem;
+            color: #fdca3f;
+            text-align: center;
+        }
+
+        .project1 {
+            padding: 1%;
+            color: white;
+            background-color: #2A629A;
+            border: solid #9c97f1;
+            margin: 10px 20px;
+        }
+
+        h2.perodic {
+            color: #6ec603;
+            text-align: center;
+        }
+
+        .periodicimg img {
+            width: 100%;
+        }
+
+        .mainlink a {
+            text-decoration: none;
+            color: #e3f925;
+            font-size: 19px;
+        }
+
+        .mainlink a:hover {
+            color: #b3b0fc;
+        }
+
+        .foursection {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .skill ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #344C64;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .footer-first,
+        .footer-second,
+        .footer-third {
+            margin: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin: 5px 0;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer ul li a:hover {
+            color: #1fd0d6;
+        }
+
+        div.last {
+            background-color: #1c3651da;
+            padding: 15px;
+        }
+
+        nav .menu-btn i {
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* nav .menu-icon {
+            display: none;
+        } */
+
+        nav .menu-icon {
+            color: white;
+            font-size: 30px;
+            line-height: 80px;
+            float: right;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+            margin-right: 40px;
+
+        }
+
+        .active {
+            color: #1fd0d6;
+        }
+
+        img .profile {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .profile {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                /* padding-top: .25rem;
+                margin-top: .8rem; */
+                overflow: hidden;
+                /* margin-right:700px; */
+                margin-left: 20px;
+            }
+            nav .left{
+                display: grid;
+                grid-template-columns: auto auto;
+                align-items: center;
+                justify-content: center;
+            }
+
+        @media screen and (max-width: 768px) {
+
+            .firstsection,
+            .secondsection,
+            .foursection {
+                padding: 0 10px;
+            }
+
+            nav .menu-icon {
+                display: block;
+            }
+
+            
+            .profile {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+            }
+
+            /* nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0%;
+                background: #3b74bd;
+                height: 100vh;
+                width: 100%;
+                display: block;
+                text-align: center;
+                transition: all 0.3s ease;
+            } */
+
+            /* #click:checked~ul {
+                left: 0;
+            } */
+            .show {
+                left: 0;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 83px;
+                left: 0;
+                right: 0;
+                height: 100vh;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                background: #3b74bd;
+                /* gap: 0; */
+                overflow: hidden;
+                text-align: center;
+            }
+
+            nav ul li {
+                padding: 20px;
+                padding-top: 0;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            #menuList {
+                transition: all 0.5s;
+            }
+
+            /* nav ul li {
+                margin: 40px 0;
+            } */
+
+            nav ul li a {
+                font-size: 20px;
+                display: block;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project1 {
+                margin: 10px 0;
+            }
+
+            nav .menu-btn i {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <hr>
+        <nav>
+            <div class="left"><b>Priyatam's Portfolio</b>
+                <img src="WhatsApp Image 2024-05-25 at 10.14.11_5b3bb0d4.jpg" alt="imga" class="profile">
+            </div>
+            
+                
+            
+            <div class="right" id="nav-menu">
+                <ul id="menuList">
+                    <li><a href="#home" class="nav_link">Home</a></li>
+                    <li><a href="#about" class="nav_link">About</a></li>
+                    <li><a href="#thirdsection" class="nav_link">Projects</a></li>
+                    <li><a href="#skills" class="nav_link">Skills</a></li>
+                    <li><a href="#contact" class="nav_link">Contact me</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+                </div>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <section class="firstsection" id="home">
+            <div class="leftsection">Hi, my name is <span class="purpple">Priyatam</span>
+                <div>and I am a Passionate</div>
+                <span id="element"></span>
+                <div class="btn">
+                    <button class="button"><a href="priyatamcv (1).pdf" download="cv">Download Resume</a></button>
+                    <button class="github"><a href="https://github.com/Theflash39" target="_blank">Visit
+                            Github</a></button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img class="period" src="devloper.png" alt="Developer Image">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <h1 id="about">About:</h1>
+            <br>
+            <hr>
+            <div class="about-text">
+                <span id="elements"></span>
+            </div>
+        </section>
+        <hr>
+        <section id="thirdsection">
+            <h1 class="mywork">My Works</h1>
+            <hr>
+            <h2 class="perodic">Periodic Table of Websites</h2>
+            <br>
+            <div class="project1">
+                A Periodic table through which we can access various types of websites.
+                <br>
+                Technologies: HTML, CSS.
+                <div class="periodicimg">
+                    <img src="webperiod.png" alt="Image of Periodic Table Project">
+                </div>
+                <div class="mainlink">
+                    Link: <a href="https://priyatamdash.github.io/webperiodictable/" target="_blank">Periodic Table</a>
+                </div>
+            </div>
+            <h2 class="perodic">QR Generator</h2>
+            <br>
+            <div class="project1">
+                It generates QR codes for different links and texts.
+                <br>
+                Technologies: HTML, CSS, JS.
+                <div class="periodicimg">
+                    <img src="qrgenarator.png" alt="Image of QR Generator Project">
+                </div>
+                <div class="mainlink">
+                    Link: <a href="https://priyatamdash.github.io/QRgenerator/" target="_blank">QR Generator</a>
+                </div>
+            </div>
+            <h2 class="perodic">Text To Speech Converter</h2>
+            <br>
+            <div class="project1">
+                This project converts text to speech in different languages.
+                <br>
+                Technologies: HTML, CSS, JS.
+                <div class="periodicimg">
+                    <img src="converter.png" alt="Image of Text to Speech Converter Project">
+                </div>
+                <div class="mainlink">
+                    Link: <a href="https://priyatamdash.github.io/speeach/" target="_blank">Voice Changer</a>
+                </div>
+            </div>
+            <h2 class="perodic">Calculator</h2>
+            <br>
+            <div class="project1">
+                This is a simple calculator for different mathematical operations.
+                <br>
+                Technologies: HTML, CSS, JS.
+                <div class="periodicimg">
+                    <img src="calculator.png" alt="Image of Calculator Project">
+                </div>
+                <div class="mainlink">
+                    Link: <a href="https://priyatamdash.github.io/calculatorr/" target="_blank">Calculator</a>
+                </div>
+            </div>
+        </section>
+        <section class="foursection" id="skills">
+            <br>
+            <h1 class="mywork">Skills</h1>
+            <div class="skill">
+                <ul>
+                    <li><b>Technical Skills</b></li>
+                    <hr>
+                    <li>Languages: HTML, CSS, JavaScript</li>
+                    <li>Tools: Git, GitHub, VS Code</li>
+                    <li>Additional skills: Responsive design</li>
+                    <hr>
+                    <li><b>Soft skills</b></li>
+                    <li>Problem-solving</li>
+                    <li>Attention to detail</li>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <div class="footer" id="contact">
+            <div class="footer-first">
+                <h3>Priyatam's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><b>Contact me</b></li>
+                    <li><b>Phone:</b> +91-9937191554</li>
+                    <li><b>Email:</b> dashpriyatam607@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><b>Connect with Me</b></li>
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li><a href="https://x.com/home" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><b>Get to Know Us</b></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#thirdsection">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </footer>
+    <section>
+        <div class="last">
+            Copyright&#169;priyatamportfolio.com | All rights reserved
+        </div>
+        <hr>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed1 = new Typed('#element', {
+            strings: ['Web Developer'],
+            typeSpeed: 50,
+        });
+        var typed2 = new Typed('#elements', {
+            strings: ["Hello! My name is Priyatam, and I am a dedicated frontend developer with a passion for creating visually appealing and user-friendly web applications. With a background in computer science, I have developed a strong foundation in programming and problem-solving. I enjoy the challenge of turning complex requirements into intuitive and accessible user interfaces. My career aspiration is to become a lead frontend developer at a forward-thinking tech company where I can contribute to innovative projects and continue to grow professionally. I am particularly interested in working on applications that make a positive impact on people's lives, whether through improving productivity, providing entertainment, or facilitating communication. In addition to my technical skills, I value collaboration and continuous learning. I am always looking for opportunities to learn new technologies and improve my existing skills. Outside of coding, I enjoy [mention any hobbies or interests]. Thank you for visiting my portfolio."],
+            typeSpeed: 1,
+        });
+
+
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "100vh";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        const navMenu = document.getElementById('nav-menu')
+        const navLink = document.querySelector('.nav_link')
+
+        function linkAction() {
+            navLink.forEach(n => n.classList.remove('active'))
+            this.classList.add('active');
+
+
+            navMenu.classList.remove('show')
+
+        }
+
+        navLink.forEach(n => n.addEventListener('click', linkAction))
+
+    </script>
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
